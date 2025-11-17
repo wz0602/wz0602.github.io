@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虚拟曹冲称象</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 主游戏区域 -->
+        <div class="main-area">
+            <div class="water-surface"></div>
+            <div class="boat floating" id="boat">
+                <img class="boat-img" src="chuan.png" alt="小船">
+                <div class="water-line" id="waterLine" 
+                     style="background-color: rgb(255, 255, 255); box-shadow: rgba(231, 76, 60, 0.6) 0px 0px 5px;">
+                </div>
+                <div class="boat-stones" id="boatStones"></div>
+            </div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <h2 class="panel-title">曹冲称象</h2>
+            
+            <!-- 大象容器 -->
+            <div class="daxiang-container" id="daxiangContainer">
+                <div class="daxiang" data-weight="200">
+                    <img src="dx.png" alt="大象">
+                </div>
+            </div>
+            
+            <!-- 添加水位线按钮 -->
+            <button class="addline-btn" onclick="addLine()">添加水位线</button>
+
+            <!-- 石头容器 -->
+            <div class="stones-container" id="stonesContainer">
+                <div class="stone" data-weight="20" data-stone="1">
+                    <img src="st-1.png" alt="石头1">
+                </div>
+                <div class="stone" data-weight="5" data-stone="2">
+                    <img src="st-2.png" alt="石头2">
+                </div>
+                <div class="stone" data-weight="5" data-stone="3">
+                    <img src="st-3.png" alt="石头3">
+                </div>
+                <div class="stone" data-weight="10" data-stone="4">
+                    <img src="st-4.png" alt="石头4">
+                </div>
+                <div class="stone" data-weight="30" data-stone="5">
+                    <img src="st-5.png" alt="石头5">
+                </div>
+                <div class="stone" data-weight="20" data-stone="6">
+                    <img src="st-6.png" alt="石头6">
+                </div>
+                <div class="stone" data-weight="10" data-stone="7">
+                    <img src="st-7.png" alt="石头7">
+                </div>
+            </div>
+            
+            <!-- 重置按钮 -->
+            <button class="reset-btn" onclick="resetBoat()">重置</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
